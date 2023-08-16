@@ -1,0 +1,481 @@
+Example questions:
+INTRO:
+In AI, what are the differences between environments that are:
+Discrete vs continuous:
+	If an environment consists of a finite number of actions that can be deliberated in the environment to obtain the output, it is said to be a discrete environment. The game of chess is discrete as it has only a finite number of moves. The number of moves might vary with every game, but still, it’s finite.
+	The environment in which the actions are performed cannot be numbered i.e. is not discrete, is said to be continuous. Self-driving cars are an example of continuous environments as their actions are driving, parking, etc. which cannot be numbered.
+
+Episodic vs sequential:
+	In an Episodic task environment, each of the agent’s actions is divided into atomic incidents or episodes. There is no dependency between current and previous incidents. In each
+	incident, an agent receives input from the environment and then performs the corresponding action. Example: Consider an example of Pick and Place robot, which is used to detect
+	defective parts from the conveyor belts. Here, every time robot(agent) will make the decision on the current part i.e. there is no dependency between current and previous decisions.
+	In a Sequential environment, the previous decisions can affect all future decisions. The next action of the agent depends on what action he has taken previously and what action he is supposed to take in the future. Example: Checkers- Where the previous move can affect all the following moves.
+
+Singe-agent multi-agent:
+    An environment consisting of only one agent is said to be a single-agent environment.
+    A person left alone in a maze is an example of the single-agent system.
+    An environment involving more than one agent is a multi-agent environment.
+    The game of football is multi-agent as it involves 11 players in each team.
+
+Fully observable vs partially observable:
+	When an agent sensor is capable to sense or access the complete state of an agent at each point in time, it is said to be a fully observable environment else it is partially observable.
+    Maintaining a fully observable environment is easy as there is no need to keep track of the history of the surrounding.
+    An environment is called unobservable when the agent has no sensors in all environments.
+    Examples: 
+        Chess – the board is fully observable, and so are the opponent’s moves.
+        Driving – the environment is partially observable because what’s around the corner is not known.
+
+
+What is the difference between search problems, decision problems, and optimization problems?
+	In a search problem you are looking for something.
+	In an optimization problem you want to find the best way to do something.
+	In a decision problem you are trying to decide whether something is true.
+
+What does time complexity and space complexity mean in computer science?
+
+Define in your own words:
+	(a) intelligence: One's ability to solve problems, think in an abstract way, learn, grasp ideas, reason, plan and associate.
+	(b) artificial intelligence: intelligence demonstrated by machines, as opposed to the natural intelligence displayed by animals and humans.
+	(c) agent: See above...
+	(d) rationality: is the quality of being guided by or based on reasons. In this regard, a person acts rationally if they have a good reason for what they do or a belief is rational if it is based on strong evidence.
+	(e) logical reasoning. LOGIC, KNOWLEDGE, REASONING, PLANNING
+
+What is the difference between propositional logic, first-order logic, second order logic?
+	Propositional logic is an analytical statement which is either true or false. It is basically a technique that represents the knowledge in logical & mathematical form. 
+	Since propositional logic works on 0 and 1 thus it is also known as ‘Boolean Logic’.
+
+	First-Order Logic is another knowledge representation in AI which is an extended part of PL. FOL articulates the natural language statements briefly. Another name of First-Order Logic is ‘Predicate Logic’.
+	Unlike PL, FOL assumes some of the facts that are related to objects, relations, and functions.
+	FOL has two main key features or you can say parts that are; ‘Syntax’ & ‘Semantics’.
+
+	First-order logic quantifies only variables that range over individuals (elements of the domain of discourse); second-order logic, in addition, also quantifies over relations. For
+	example, a second-order sentence could say that for every formula P, and every individual x, either Px is true or not(Px) is true.
+
+What is the difference between syntax and semantics in propositional logic?
+	syntax: specifies the symbols used, and how they can be combined to form legal sentences.
+	semantics: specifies the meaning of the symbols.
+
+How it is the difference between inference by model-checking and inference by theorem proving in propositional logic?
+	In theorem proving, programs are typically verified method-by-method. Given a method and its contract, a theorem prover transforms the precondition while symbolically executing the
+	method. Then, it checks whether the transformed precondition is a model of the postcondition (i.e., it implies the postcondition).
+
+	In model checking, programs are usually verified by means of test scenarios. A model checker takes the program and test scenarios as input and exhaustively searches for possible
+	violations. The difference of test scenarios compared to test cases is that they can include arbitrary values (e.g., a boolean value or a positive integer), which are all considered
+	during model checking.
+
+	"In model-checking, you describe an abstracted version of your system and you can automatically check some properties. Your model has to be small enough (in term of number of states)
+	to be processed by the tool, and the class of formulas you can express may be limited. Typically, you can check safety properties (such as assert statement in your code).
+	On the other hand, using a theorem prover (I think "proof assistant" is a better term), you can work on more accurate representations of your system and express any properties, but
+	most proofs have to be done manually which requires time and expertise."
+
+What does soundness, satisfiability, validity, and completeness mean in the context of propositional logic?
+	A deductive argument is sound if and only if it is both valid, and all of its premises are actually true. Otherwise, a deductive argument is unsound.
+	
+	In mathematical logic, a formula is satisfiable if it is true under some assignment of values to its variables. For example, the formula x + 3 = y {\displaystyle x+3=y} is satisfiable
+	because it is true when x = 3 x=3 and y = 6 {\displaystyle y=6}, while the formula x + 1 = x {\displaystyle x+1=x} is not satisfiable over the integers.
+
+	An argument is valid if and only if it takes a form that makes it impossible for the premises to be true and the conclusion nevertheless to be false. It is not required that a valid
+	argument have premises that are actually true, but to have premises that, if they were true, would guarantee the truth of the argument's conclusion.
+	In propositional logic, a valid formula is also caleld a tautology. An argument is sound if it is valid and all the premises true.
+	In general, an argument is said to be logically valid whenever it has a form that makes it impossible for the conclusion to be false if the premises are true.
+
+	A formal system is called complete with respect to a particular property if every formula having the property can be derived using that system, i.e. is one of its theorems; otherwise
+	the system is said to be incomplete. 
+
+What does it mean that an algorithm is sound or truth-preserving?
+	An algorithm is sound if, anytime it returns an answer, that answer is true. An algorithm is complete if it guarantees to return a correct answer for any arbitrary input (or, if no
+	answer exists, it guarantees to return failure). Two important points: Soundness is a weak guarantee.
+
+	An argument is called truth preserving if it does not produce false conclusions given true premises.
+
+What is De Morgan’s laws?
+	In propositional logic and Boolean algebra, De Morgan's laws are a pair of transformation rules that are both valid rules of inference. The rules can be expressed in English as: 
+    The complement of the union of two sets is the same as the intersection of their complements.
+    The complement of the intersection of two sets is the same as the union of their complements.
+	OR:
+    not (A or B) = (not A) and (not B).
+    not (A and B) = (not A) or (not B).
+
+What is proof by resolution, and how does it work?
+	Resolution is a theorem proving technique that proceeds by building refutation proofs, i.e., proofs by contradictions. Resolution is used, if there are various statements are given,
+	and we need to prove a conclusion of those statements.
+
+What is conjunctive normal form (CNF), and how it is useful for logical inference?
+	Conjunctive normal form (CNF) is an approach to Boolean logic that expresses formulas as conjunctions of clauses with an AND or OR. Each clause connected by a conjunction, or AND, must
+	be either a literal or contain a disjunction, or OR operator. CNF is useful for automated theorem proving.
+
+What is the difference between definite clauses, horn clauses, and goal clauses?
+	A definite clause is a Horn clause that has exactly one positive literal. A Horn clause without a positive literal is called a goal. Horn clauses express a subset of statements of
+	first-order logic. The goal clause are the statements that need to be satisfied in order to achieve the goal which is the Prolog head ancestor(X,Y)
+
+What is forward and backward chaining in the context of logical inference?
+	Forward chaining as the name suggests, start from the known facts and move forward by applying inference rules to extract more data, and it continues until it reaches to the goal,
+	whereas backward chaining starts from the goal, move backward by using inference rules to determine the facts that satisfy the goal.
+	Forward chaining is called a data-driven inference technique, whereas backward chaining is called a goal-driven inference technique.
+	Forward chaining uses breadth-first search strategy, whereas backward chaining uses depth-first search strategy.
+
+Express the following sentences in natural language (English): ¬p p ∨ q p ∧ q p ⇒ q ¬p ⇒ ¬q ¬p ∨ (p ∧ q) ∀x ∃yz Heart(y,x) ∧ Soul(z,x) ∀x ¬Eats(x,Snails) ∀x ∃y Brain(y,x) Translate the following sentences to symbolic form: Everybody likes Jakob Somebody screamed for help and called the police Prove
+(or disprove) that: P ∧ Q |= P ∨ Q Given knowledge base: A ∨ B ∨ C ¬A ∨ ¬B ¬A ∨ ¬C ¬B ∨ ¬C B ∨ A C ∨ ¬A Apply resolution and prove that B is true (by assuming ¬B). Since you are doing this
+from home, I assume that you will have access to equivalences and inference rules.
+
+SEARCH Search is a key part of AI. Why? What are some common search strategies and what are their strengths and weaknesses?
+	Search algorithms are algorithms that help in solving search problems. A search problem consists of a search space, start state, and goal state. Search algorithms help the AI agents to
+	attain the goal state through the assessment of scenarios and alternatives. The algorithms provide search solutions through a sequence of actions that transform the initial state to
+	the goal state. Without these algorithms, AI machines and applications cannot implement search functions and find viable solutions.
+
+	Uniformed search (blind algorithms): DFS, BFS, Uniform Cost search.
+	Informed search: Greedy search, A*, Graph search.
+
+	Advatanges and disadvantages: https://medium.com/@vatsalunadkat/advantages-and-disadvantages-of-ai-algorithms-d8fb137f4df2
+
+Explain the following graph-theoretical concepts: vertex (or node), edge (or arc), directed/undirected, parent, and child. Draw the following graph, G = (V,E), with vertices {V1, V2, V3,
+V4, V5} and edges {V1, V2}, {V2,V5}, {V3,V4}, {V2,V3}. Do a DFS/BFS/A* search on the following graph (then you will get a graph similar to the one in assignment 1.4.). In your solution,
+clearly indicate (a) the order in which each node is expanded, (b) the total path cost, and (in case of heuristics) the value of the heuristic function of each node. What is branching
+factor, and how do you calculate it? Give an example! What is the difference between uninformed and informed search When are one or the other appropriate?
+
+What does it mean that a heuristic is admissible?
+	Admissible heuristics are used to estimate the cost of reaching the goal state in a search algorithm. Admissible heuristics never overestimate the cost of reaching the goal state. The
+	use of admissible heuristics also results in optimal solutions as they always find the cheapest path solution.
+	For a heuristic to be admissible to a search problem, needs to be lower than or equal to the actual cost of reaching the goal.
+
+What does it mean that a heuristic is consistent?
+	A heuristic is considered to be consistent if the estimated cost from one node to the successor node, added to the estimated cost from the successor node to the goal is less than or
+	equal to the estimated cost from the current node to the goal state.
+	In an admissible heuristic, the estimated cost from the current node to the goal state is never greater than the actual cost.
+	All consistent heuristics are admissible heuristics, however, all admissible heuristics are not necessarily consistent heuristics.
+
+What does ”weight” mean in weighted A* search, and when can it be useful?
+	A* chooses the path not only based on the weight of the edges but also based on the distance from the goal
+	Many of the most effective algorithms in satisficing search have a weight parameter that can be used to govern the bal- ance between solution quality and search effort.
+
+Explain the basic idea behind contour search.
+	Used around mountains and in valleys when sharp changes in elevation make other patterns not practical.
+	Search is started from highest peak and goes from top to bottom with new search altitude for each circuit.
+
+Explain the basic idea behind iterative-deepening.
+	IDDFS combines depth-first search’s space-efficiency and breadth-first search’s fast search (for nodes closer to root). 
+	IDDFS calls DFS for different depths starting from an initial value. In every call, DFS is restricted from going beyond given depth. So basically we do DFS in a BFS fashion. 
+
+Explain the basic idea behind Hill-climbing.
+	Hill climbing algorithm is a local search algorithm which continuously moves in the direction of increasing elevation/value to find the peak of the mountain or best solution to the
+	problem. It terminates when it reaches a peak value where no neighbor has a higher value.
+	One of the widely discussed examples of Hill climbing algorithm is Traveling-salesman Problem in which we need to minimize the distance traveled by the salesman.
+
+Explain the basic idea behind Evolutionary Algorithms.
+	Evolutionary algorithms are a heuristic-based approach to solving problems that cannot be easily solved in polynomial time, such as classically NP-Hard problems, and anything else that
+	would take far too long to exhaustively process.
+	An evolutionary algorithm (EA) is an algorithm that uses mechanisms inspired by nature and solves problems through processes that emulate the behaviors of living organisms. EA is a
+	component of both evolutionary computing and bio-inspired computing.
+
+Explain the basic idea behind minmax search.
+
+	Mini-max algorithm is a recursive or backtracking algorithm which is used in decision-making and game theory. It provides an optimal move for the player assuming that opponent is also
+	playing optimally. Mini-Max algorithm uses recursion to search through the game-tree. Min-Max algorithm is mostly used for game playing in AI. Such as Chess, Checkers, tic-tac-toe, go,
+	and various tow-players game. This Algorithm computes the minimax decision for the current state.
+
+	In this algorithm two players play the game, one is called MAX and other is called MIN. Both the players fight it as the opponent player gets the minimum benefit while they get the
+	maximum benefit. Both Players of the game are opponent of each other, where MAX will select the maximized value and MIN will select the minimized value.
+
+	The minimax algorithm performs a depth-first search algorithm for the exploration of the complete game tree. The minimax algorithm proceeds all the way down to the terminal node of the
+	tree, then backtrack the tree as the recursion.
+
+Explain the basic idea behind Alpha-Beta pruning.
+	Alpha-beta pruning is a modified version of the minimax algorithm. It is an optimization technique for the minimax algorithm. 
+	As we have seen in the minimax search algorithm that the number of game states it has to examine are exponential in depth of the tree. Since we cannot eliminate the exponent, but we
+	can cut it to half. Hence there is a technique by which without checking each node of the game tree we can compute the correct minimax decision, and this technique is called pruning.
+	This involves two threshold parameter Alpha and beta for future expansion, so it is called alpha-beta pruning. It is also called as Alpha-Beta Algorithm.
+
+	Alpha-beta pruning can be applied at any depth of a tree, and sometimes it not only prune the tree leaves but also entire sub-tree.
+	The two-parameter can be defined as:
+		Alpha: The best (highest-value) choice we have found so far at any point along the path of Maximizer. The initial value of alpha is -∞.
+		Beta: The best (lowest-value) choice we have found so far at any point along the path of Minimizer. The initial value of beta is +∞.
+	The Alpha-beta pruning to a standard minimax algorithm returns the same move as the standard algorithm does, but it removes all the nodes which are not really affecting the final
+	decision but making algorithm slow. Hence by pruning these nodes, it makes the algorithm fast. 
+
+Explain the basic idea behind Monte Carlo Tree Search.
+	Monte Carlo Tree Search (MCTS) is a search technique in the field of Artificial Intelligence (AI). It is a probabilistic and heuristic driven search algorithm that combines the classic
+	tree search implementations alongside machine learning principles of reinforcement learning.
+	In tree search, there’s always the possibility that the current best action is actually not the most optimal action. In such cases, MCTS algorithm becomes useful as it continues to
+	evaluate other alternatives periodically during the learning phase by executing them, instead of the current perceived optimal strategy. This is known as the ” exploration-exploitation
+	trade-off “. It exploits the actions and strategies that is found to be the best till now but also must continue to explore the local space of alternative decisions and find out if
+	they could replace the current best (random sampling).
+
+UNCERTAINTY & PROBABILITY:
+Explain the following concepts from probability theory:
+	Experiment/trial: Consider some phenomenon or process that is repeatable. We will use the word experiment to describe the process. A single repetition of the experiment is a trial.
+	Sample space: We define the sample space as the set of all possible outcomes of an experiment.
+	Sample point: Member of the sample space.
+	Mutual exclusive: Two events A and B are mutually exclusive (or disjoint - no element in common) if it is impossible for both to occur.
+	Complement: A complement of a set A refers to things not in A.
+	Independent events: two events are independent iff P(A|B) = P(A).
+	Dependent events: The outcome of one event affects the outcome of the other. Example: We have a bag contains balls in two different colors.
+	Event A = We draw a ball from the bag. Event B = We draw a second ball without the first one being replaced. In this case, they are dependent events because the outcome of Event B is
+	affected by the outcome of Event A(which color we drew in Event A).
+
+	See: https://medium.com/analytics-vidhya/fundamentals-of-probability-for-data-science-7fd59d80ebd0
+
+What is the chain rule (or product rule) of probability?
+	The chain rule is used when you have multiple trials, meaning that you want to measure several events one after another. In these cases you need to multiply the probability of the
+	first event by the probability of the second event. It’s important to pay attention to whether the events are independent of each other or not. 
+
+	The chain rule can be used iteratively to calculate the joint probability of any no.of events. (Joint probability is a statistical measure that calculates the likelihood of two events
+	occurring together and at the same point in time.)
+
+What is conditional probability?
+	Probability of one event occurring in the presence of a second event.
+
+What is Baye’s theorem, and how does it relate to conditional probability?
+	Bayes’ Theorem is used to calculate a conditional probability. It provides us to have an improved belief with each additional evidence.
+	It is used commonly for false positives and false negatives. Spam filtering and medical testing are some areas of the use of Bayes’ Theorem.
+
+What is marginal probability?
+	Probability of a single event occurring which is not conditioned on another event.
+
+What is probability distribution?
+	A probability distribution is an idealized frequency distribution. A frequency distribution describes a specific sample or dataset. It's the number of times each possible value of a
+	variable occurs in the dataset. The number of times a value occurs in a sample is determined by its probability of occurrence. Sannolikhetsfördelning (beskrivning (ofta i form av en
+	funktion) av sannolikheterna för utfallen i ett utfallsrum. )
+
+Apply Baye’s rule and show the probability for P (A) given (B), assuming that P(A) = 0.1, P(B) = 0.2, and P(B | A) = 0.5).
+************************
+
+What is meant by full joint probability distribution?
+	Given two random variables that are defined on the same probability space, the joint probability distribution is the corresponding probability distribution on all possible pairs of
+	outputs. The joint distribution can just as well be considered for any given number of random variables. The joint distribution encodes the marginal distributions, i.e. the
+	distributions of each of the individual random variables. It also encodes the conditional probability distributions, which deal with how the outputs of one random variable are
+	distributed when given information on the outputs of the other random variable(s).
+
+What is meant by ”marginalization”, ”conditioning”, ”marginal independence”, and ”conditional independence” in probability theory?
+	Marginalisation is a method that requires summing over the possible values of one variable to determine the marginal contribution of another. That definition may sound a little
+	abstract so let’s try to illustrate this with an example: https://towardsdatascience.com/probability-concepts-explained-marginalisation-2296846344fc
+
+	Beliefs depend on the available information. This idea is formalized in probability theory by conditioning. Conditional probabilities, conditional expectations, and conditional
+	probability distributions are treated on three levels: discrete probabilities, probability density functions, and measure theory. Conditioning leads to a non-random result if the
+	condition is completely specified; otherwise, if the condition is left random, the result of conditioning is also random. 
+
+	In probability theory and statistics, the marginal distribution of a subset of a collection of random variables is the probability distribution of the variables contained in the
+	subset. It gives the probabilities of various values of the variables in the subset without reference to the values of the other variables. This contrasts with a conditional
+	distribution, which gives the probabilities contingent upon the values of the other variables.
+
+	Marginal variables are those variables in the subset of variables being retained. These concepts are "marginal" because they can be found by summing values in a table along rows or
+	columns, and writing the sum in the margins of the table. The distribution of the marginal variables (the marginal distribution) is obtained by marginalizing (that is, focusing on
+	the sums in the margin) over the distribution of the variables being discarded, and the discarded variables are said to have been marginalized out. 
+
+	In probability theory, conditional independence describes situations wherein an observation is irrelevant or redundant when evaluating the certainty of a hypothesis. Conditional
+	independence is usually formulated in terms of conditional probability, as a special case where the probability of the hypothesis given the uninformative observation is equal to the
+	probability without. If A A is the hypothesis, and B B and C C are observations, conditional independence can be stated as an equality:
+    P ( A ∣ B , C ) = P ( A ∣ C )
+
+Explain what is ”Naive” about a Naive Bayes’ Model.
+	Naive Bayes is a supervised learning algorithm used for classification tasks. Hence, it is also called Naive Bayes Classifier.
+	As other supervised learning algorithms, naive bayes uses features to make a prediction on a target variable. The key difference is that naive bayes assumes that features are
+	independent of each other and there is no correlation between features. However, this is not the case in real life. This naive assumption of features being uncorrelated is the reason
+	why this algorithm is called “naive”.
+	Naive bayes is a supervised learning algorithm for classification so the task is to find the class of observation (data point) given the values of features.
+
+What is the joint distribution of the following Bayesian Network (and then you will be given some simple graph like in question 2 of assignment 2.1.)
+**************
+
+What is the joint probability of a certain configuration of variables in the following Bayesian Network (and then you will be given some simple graph like in question 3 of assignment 
+2.1.)
+**************
+
+How does exact inference by variable enumeration work in Bayesian Networks?
+	Inference by enumeration is the general framework for solving inference queries when a joint distribution is given.
+	Bayesian networks are assumed to be defined by conditional probability tables.
+	Why is inference by enumeration so slow?
+	You join up the whole joint distribution before you sum out the hidden variables. You end up repeating a lot of work!
+	Variable elimination is the dynamic programming version (better way) for Bayesian networks.
+
+Explain the main principles behind prior sampling, rejection sampling, and importance sampling in approximate inference in Bayesian networks.
+	Prior sampling: Get samples from the BN.
+
+	Rejection sampling: 
+	Let us say we want P(C). No point keeping all samples around. Just tally (get total) counts of C as we go.
+	Let us say we want P(C|+s). Same thing: tally C outcomes, but ignore (reject) samples which do not have S=+s
+	This is called rejection sampling. It is also consistent for conditional probabilities (i.e., correct in the limit).
+
+	Importance sampling:
+	Importance sampling has become the basis for several state-of-the-art stochastic sampling-based inference algorithms for Bayesian networks. These algorithms inherit the characteristic
+	that their accuracy largely depends on the quality of the importance functions that they manage to get. The theoretical convergence rate is in the order of , where is the number of
+	samples, for essentially all Monte Carlo methods. Therefore, the further the importance function is from the posterior distribution, the more samples it needs to converge. The number
+	of samples needed increases at least at a quadratic speed. Hence, given a fixed number of samples, any effort to make the importance function closer to the posterior distribution will
+	directly influence the precision of sampling algorithms. To achieve a given precision, a good importance function can save us lots of samples. 
+	https://www.sciencedirect.com/science/article/pii/S0895717705005443
+
+
+STOCHASTIC METHODS:
+When is stochastic methods appropriate?
+	Stochastic is commonly used to describe mathematical processes that use or harness randomness.
+	Many physical and engineering systems use stochastic processes as key tools for modelling and reasoning.  A stochastic process is a probability model describing a collection of
+	time-ordered random variables that represent the possible sample paths. It is widely used as a mathematical model of systems and phenomena that appear to vary in a random manner. As a
+	classic technique from statistics, stochastic processes are widely used in a variety of areas including bioinformatics, neuroscience, image processing, financial markets, etc. 
+
+	Stochasticity is the property of being well described by a random probability distribution. Although stochasticity and randomness are distinct in that the former refers to a modelling
+	method and the latter to phenomena, the terms are frequently used interchangeably. Furthermore, the formal concept of a stochastic process is also referred to as a random process in
+	probability theory.
+
+	Stochasticity is employed in a variety of domains, including biology, chemistry, ecology, neuroscience, and physics, as well as image processing, signal processing, information theory,
+	computer science, cryptography, and telecommunications. It’s also employed in health, linguistics, music, media, colour theory, botany, manufacturing, and geomorphology, all of which
+	are affected by seemingly random movements in financial markets. In social science, stochastic modelling is utilized.
+
+What is a Markov process (or Markov Chain)?
+	A Markov process is a random process in which the future is independent of the past, given the present. Thus, Markov processes are the natural stochastic analogs of the deterministic
+	processes described by differential and difference equations. They form one of the most important classes of random processes.
+
+	One property that makes the study of a random process much easier is the “Markov property”. In a very informal way, the Markov property says, for a random process, that if we know the
+	value taken by the process at a given time, we won’t get any additional information about the future behaviour of the process by gathering more knowledge about the past. Stated in
+	slightly more mathematical terms, for any given time, the conditional distribution of future states of the process given present and past states depends only on the present state and
+	not at all on the past states (memoryless property). A random process with the Markov property is called Markov process.
+
+	Based on the previous definition, we can now define “homogenous discrete time Markov chains” (that will be denoted “Markov chains” for simplicity in the following). A Markov chain is a
+	Markov process with discrete time and discrete state space. So, a Markov chain is a discrete sequence of states, each drawn from a discrete state space (finite or not), and that
+	follows the Markov property.
+
+What is a transition matrix for a Markov process?
+	A transition matrix can be used to describe the following:
+	Imagine also that the following probabilities have been observed:
+
+    When the reader doesn’t visit TDS a day, he has 25% chance of still not visiting the next day, 50% chance to only visit and 25% to visit and read.
+    When the reader visits TDS without reading a day, he has 50% chance to visit again without reading the next day and 50% to visit and read.
+	When the reader visits and read a day, he has 33% chance of not visiting the next day (hope that this post won’t have this kind of effect!), 33% chance to only visit and 34% to visit
+	and read again.
+	See matrix here: https://towardsdatascience.com/brief-introduction-to-markov-chains-2c8cab9c98ab
+
+What is the basic idea behind Monte Carlo methods?
+	Uses repated random sampling to generate numerical results...
+
+How does Gibbs sampling work?
+	The Gibbs Sampling is a Monte Carlo Markov Chain method that iteratively draws an instance from the distribution of each variable, conditional on the current values of the other
+	variables in order to estimate complex joint distributions.
+
+	Gibbs sampling is one of the most popular MCMC algorithms with applications in Bayesian statistics, computational linguistics, and more.
+	say that there is an m-component joint distribution of interest that is difficult to sample from. even though i do not know how to sample from the joint distribution, assume that i do
+	know how to sample from the full conditional distributions. that is, i can easily sample from each of the m components conditional on the other m-1. under these conditions, gibbs
+	sampling iteratively updates each of the components based on the full conditionals to obtain samples from the joint distribution.
+
+How does Metropolis-Hastings sampling work?
+	The Metropolis Hastings algorithm is a beautifully simple algorithm for producing samples from distributions that may otherwise be difficult to sample from.
+	Suppose we want to sample from a distribution π , which we will call the “target” distribution. For simplicity we assume that π is a one-dimensional distribution on the real line,
+	although it is easy to extend to more than one dimension (see below).
+
+	The MH algorithm works by simulating a Markov Chain, whose stationary distribution is π . This means that, in the long run, the samples from the Markov chain look like the samples from
+	π. As we will see, the algorithm is incredibly simple and flexible. Its main limitation is that, for difficult problems, “in the long run” may mean after a very long time. However, for
+	simple problems the algorithm can work well.
+
+What is a Hidden Markov Model, and why are they useful?
+	When we can not observe the state themselves but only the result of some probability function(observation) of the states we utilize HMM. HMM is a statistical Markov model in which the
+	system being modeled is assumed to be a Markov process with unobserved (hidden) states.
+	HMM too is built upon several assumptions and the following is vital:
+		Output independence assumption: Output observation is conditionally independent of all other hidden states and all other observations when given the current hidden state.
+		Emission Probability Matrix: Probability of hidden state generating output v_i given that state at the corresponding time was s_j.
+	Example here: https://towardsdatascience.com/markov-and-hidden-markov-model-3eec42298d75
+
+What is Kalman Filtering?
+	Kalman filtering is an algorithm that uses a series of measurements observed over time, containing statistical noise and other inaccuracies, and produces estimates of unknown variables
+	that tend to be more precise than those based on a single measurement alone. A Kalman Filter is an algorithm that takes data inputs from multiple sources and estimates unknown
+	variables, despite a potentially high level of signal noise. Often used in navigation and control technology, the Kalman Filter has the advantage of being able to predict unknown
+	values more accurately than if individual predictions are made using singular methods of measurement. 
+
+What is a Dynamic Bayesian Network, and how can you construct a ”normal” bayesian network representation of a dynamic bayesian network?
+	A Bayesian network is a snapshot of the system at a given time and is used to model systems that are in some kind of equilibrium state. Unfortunately, most systems in the world change
+	over time and sometimes we are interested in how these systems evolve over time more than we are interested in their equilibrium states. Whenever the focus of our reasoning is change
+	of a system over time, we need a tool that is capable of modeling dynamic systems.
+
+	Equilibrium: a state of balance between opposing forces or actions.
+
+	A dynamic Bayesian network (DBN) is a Bayesian network extended with additional mechanisms that are capable of modeling influences over time (Murphy, 2002). The temporal extension of
+	Bayesian networks does not mean that the network structure or parameters changes dynamically, but that a dynamic system is modeled. In other words, the underlying process, modeled by a
+	DBN, is stationary. A DBN is a model of a stochastic process. See: https://www.bayesfusion.com/dbns/
+
+What is a Markov Decision Process (MDP), and when is it useful?
+	A Markov Decision Process (MDP) is a mathematical framework used for modeling decision-making problems where the outcomes are partly random and partly controllable.
+	An MDP is defined by (S, A, P, R, γ), where A is the set of actions. It is essentially MRP with actions. Introduction to actions elicits a notion of control over the Markov Process,
+	i.e., previously, the state transition probability and the state rewards were more or less stochastic (random). However, now the rewards and the next state also depend on what action
+	the agent picks. Basically, the agent can now control its own fate (to some extent).
+
+What is the typical goal of a MDP? AND How is the utility of state sequences calculated in a MDP, and what is the point of the discount factor?
+	The state of the environment affects the immediate reward obtained by the agent, as well as the probabilities of future state transitions. The agent's objective is to select actions to
+	maximize a long-term measure of total reward.
+	Rewards are temporary. Even after picking an action that gives a decent reward, we might be missing on a greater total reward in the long-run. This long-term total reward is the
+	Return. However, in practice, we consider discounted Returns.
+
+Explain the explore and exploit dilemma and why it is central to reinforcement learning.
+	Exploration is more of a long-term benefit concept where it allows the agent to improve its knowledge about each action which could lead to long term benefit.
+
+	Exploitation basically exploits the agent’s current estimated value and chooses the greedy approach to get the most reward. However, the agent is being greedy with the estimated value
+	and not the actual value, so chances are it might not get the most reward.
+
+Write a transition matrix for the following Markov process: REINFORCEMENT LEARNING Explain the difference between finite and infinite-time horizons in MDPs. Explain the difference between stationary and non-stationary policies.
+****
+
+What does ”policy” mean in the context of reinforcement learning?
+	A policy is, therefore, a strategy that an agent uses in pursuit of goals. The policy dictates the actions that the agent takes as a function of the agent’s state and the environment.
+	An agent's behaviour at any point of time is defined in terms of a policy.
+
+What is the idea behind the Bellman equation, and how does it relate to dynamic programming and reinforcement learning?
+	According to the Bellman Equation, long-term- reward in a given action is equal to the reward from the current action combined with the expected reward from the future actions taken at the following time.
+	The essence is that this equation can be used to find optimal q∗ in order to find optimal policy π and thus a reinforcement learning algorithm can find the action a that maximizes
+	q∗(s, a). That is why this equation has its importance. The Optimal Value Function is recursively related to the Bellman Optimality Equation.
+
+	These are the so-called Value-based Agents that store the value function and base their decisions on it. For this purpose, we will present the Bellman equation, one of the central
+	elements of many Reinforcement Learning algorithms, and required for calculating the value functions in this post.
+
+Explain the difference between linear programming and dynamic programming.
+	Linear programming is basically formulating a bunch of linear equations or constraints and solve it.
+	Dynamic programming is more about reducing a problem to sub problems where the optimal solutions to these sub problems leads to the optimal solution for the original problem.
+
+	The first one is linear programming (LP) algorithm which is particularly suitable for solving linear optimization problems, and the second one is dynamic programming (DP) which can
+	guarantee the global optimality of a solution for a general nonlinear optimization problem with non-convex constraints.
+
+What does ”convergence” mean in the context of machine learning?
+	When formulating a problem in deep learning, we need to come up with a loss function, which uses model weights as parameters. Back-propagation starts at an arbitrary point on the error
+	manifold defined by the loss function and with every iteration intends to move closer to a point that minimises error value by updating the weights. Essentially for every possible set
+	of weights the model can have, there is an associated loss for a given loss function, with our goal being to find the minimum point on this manifold. 
+
+	Essentially meaning, a model converges when its loss actually moves towards a minima (local or global) with a decreasing trend. Its quite rare to actually come across a strictly
+	converging model but convergence is commonly used in a similar manner as convexity is. Strictly speaking rarely exists practically, but is spoken in a manner telling us how close the
+	model is to the ideal scenario for convexity, or in this case convergence. 
+
+Explain the idea behind a value iteration algorithm for reinforcement learning.
+	The update step is very similar to the update step in the policy iteration algorithm. The only difference is that we take the maximum over all possible actions in the value iteration
+	algorithm. Instead of evaluating and then improving, the value iteration algorithm updates the state value function in a single step. This is possible by calculating all possible
+	rewards by looking ahead. The value iteration algorithm is guaranteed to converge to the optimal values.
+
+	Policy iteration and value iteration are both dynamic programming algorithms that find an optimal policy π in a reinforcement learning environment. They both employ
+	variations of Bellman updates and exploit one-step look-ahead: https://www.baeldung.com/cs/ml-value-iteration-vs-policy-iteration
+	In value iteration, we compute the optimal state value function by iteratively updating the estimate v(s).
+
+Explain the idea behind q-learning.
+	The Q-learning algorithm (which is nothing but a technique to solve the optimal policy problem) iteratively updates the Q-values for each state-action pair using the Bellman Optimality
+	Equation until the Q-function (Action-Value function) converges to the optimal Q-function, q∗. This process is called Value-Iteration.
+
+What is a POMDP, and how does it extend a MDP?
+	A partially observable Markov decision process (POMDP) is a generalization of a Markov decision process (MDP). A POMDP models an agent decision process in which it is assumed that the
+	system dynamics are determined by an MDP, but the agent cannot directly observe the underlying state. Instead, it must maintain a sensor model (the probability distribution of
+	different observations given the underlying state) and the underlying MDP. Unlike the policy function in MDP which maps the underlying states to the actions, POMDP's policy is a
+	mapping from the history of observations (or belief states) to the actions.
+
+	The POMDP framework is general enough to model a variety of real-world sequential decision processes. Applications include robot navigation problems, machine maintenance, and planning
+	under uncertainty in general.
+
+	A partially observable Markov decision process (POMDP) is a combination of an regular Markov Decision Process to model system dynamics with a hidden Markov model that connects
+	unobservable system states probabilistically to observations.
+
+	The agent can perform actions which affect the system (i.e., may cause the system state to change) with the goal to maximize the expected future rewards that depend on the sequence of
+	system state and the agent’s actions in the future. The goal is to find the optimal policy that guides the agent’s actions. Different to MDPs, for POMDPs, the agent cannot directly
+	observe the complete system state, but the agent makes observations that depend on the state. The agent uses these observations to form a belief about in what state the system
+	currently is. This belief is called a belief state and is expressed as a probability distribution over all possible states. The solution of the POMDP is a policy prescribing which
+	action to take in each belief state. Note that belief states are continuous resulting in an infinite state set which makes POMDPs much harder to solve compared to MDPs.
+
+Explain the idea behind an actor-critic algorithm for reinforcement learning.
+	In a simple term, Actor-Critic is a Temporal Difference(TD) version of Policy gradient[3]. It has two networks: Actor and Critic. The actor decided which action should be taken and
+	critic inform the actor how good was the action and how it should adjust. The learning of the actor is based on policy gradient approach. In comparison, critics evaluate the action
+	produced by the actor by computing the value function.
+
+	This type of architecture is in Generative Adversarial Network(GAN) where both discriminator and generator participate in a game. The generator generates the fake images and
+	discriminator evaluate how good is the fake image generated with its representation of the real image. Over time Generator can create fake images which cannot be distinguishable for
+	the discriminator. Similarly, Actor and Critic are participating in the game, but both of them are improving over time, unlike GAN.
+
+	Actor-critic is similar to a policy gradient algorithm called REINFORCE with baseline. Reinforce is the MONTE-CARLO learning that indicates that total return is sampled from the full
+	trajectory. But in actor-critic, we use bootstrap. So the main changes in the advantage function: https://medium.com/intro-to-artificial-intelligence/the-actor-critic-reinforcement-learning-algorithm-c8095a655c14
