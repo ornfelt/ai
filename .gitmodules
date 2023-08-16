@@ -1,0 +1,6 @@
+[submodule "aima-python"]
+	path = aima-python
+	url = https://github.com/aimacode/aima-python
+[submodule "Deep-Learning"]
+	path = Deep-Learning
+	url = https://github.com/priya-dwivedi/Deep-Learning
