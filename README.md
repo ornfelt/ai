@@ -2,9 +2,13 @@
 
 ## Cloning
 
+git config --system core.longpaths true
+
+
 git clone --recurse-submodules -j8 https://github.com/ornfelt/ai
 
 
+Or:
 git clone --recursive https://github.com/ornfelt/ai
 
 ## AI-ML-DL:
