@@ -10,8 +10,8 @@ git clone --recursive https://github.com/ornfelt/ai
 ## AI-ML-DL:
 ![AI-ML-DL](./images/ai-ml-dl.png?raw=true "AI-ML-DL")
 
-## ai-lr:
-![ai-lr](./images/ai-lr.png?raw=true "ai-lr")
+## ai_lr:
+![ai_lr](./images/ai_lr.png?raw=true "ai_lr")
 
 ## functions_optimizers:
 ![functions_optimizers](./images/functions_optimizers.png?raw=true "functions_optimizers")
