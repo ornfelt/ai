@@ -141,3 +141,4 @@ dmypy.json
 cython_debug/
 literature/
 transfer-learning-conv-ai/dataset_cache_OpenAIGPTTokenizer
+Deep-Learning/COVID19_Plotly_Visualization/covid-19-data/
