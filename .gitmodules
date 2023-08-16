@@ -10,3 +10,6 @@
 [submodule "deep-learning-v2-pytorch"]
 	path = deep-learning-v2-pytorch
 	url = https://github.com/udacity/deep-learning-v2-pytorch
+[submodule "Data-science"]
+	path = Data-science
+	url = https://github.com/khuyentran1401/Data-science
